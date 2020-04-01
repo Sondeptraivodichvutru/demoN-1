@@ -10,23 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
-    if(!$result){
-        ?>
-    
-        <script>
-            alert('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu');
-            alert($count);
-        </script>
-        <?php
+    if(!$result){      
+            echo ('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu'. pg_connection_status($conn));
     } else {
-        ?>
-    
-        <script>
-            alert('Khá chắc kèo là đăng nhập thành cung');
-            alert($count);
-        </script>
-        
-        <?php 
+            echo ('Khá chắc kèo là đăng nhập thành cung'. pg_connection_status($conn));
          header("location: ../wellcome.php");
         
     }
