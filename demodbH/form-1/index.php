@@ -7,12 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = $_POST['name'];
     $mypassword = $_POST['pass'];
 
-    $sql = "SELECT * FROM tblaccount";// WHERE _name = '$myusername' and _pass = '$mypassword'";
+    $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
     //$count= pg_fetch_row($result);
     
-    while ($row=pg_fetch_row($result)){      
-          echo $row[0];    
+    if (pg_fetch_row($result)){      
+          echo 'Đăng nhập được rồi'; 
+          header("../wellcome.php");
+    }else{
+        echo 'Đăng nhập hem đc';
     }
     /*if ($count > 0) {
         $_SESSION['login_user'] = $myusername;
