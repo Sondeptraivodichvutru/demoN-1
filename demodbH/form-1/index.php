@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
     $count= mysqli_num_rows($result);
-    if($count>0){      
+    if($count==0){      
             echo ('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu'. pg_connection_status($conn));
     } else {
             echo ('Khá chắc kèo là đăng nhập thành cung'. pg_connection_status($conn));
