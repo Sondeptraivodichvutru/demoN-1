@@ -10,10 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $mypassword;
     echo $myusername;
     $sql = "SELECT * FROM tblaccount WHERE _name = 'admin' and _pass = 'a'";
-    $result = mysqli_query($conn, $sql);
-    $count = mysqli_num_rows($result);
+    $result = pg_query($conn, $sql);
+    if(!$result){
+        echo 'Đăng nhập thất bại';
+    } else {
+        echo 'Đăng nhập thành công';
+    }
     // If result matched $myusername and $mypassword, table row must be 1 row
-    if ($count > 0) {
+    /*if ($count > 0) {
         $_SESSION['login_user'] = $myusername;
         header("location: ../wellcome.php");
     } else {
@@ -23,7 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             alert($count);
         </script>
         <?php
-    }
+     * */
+     
+    
 }
 ?>
 <html lang="en">
