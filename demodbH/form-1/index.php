@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = pg_query($conn, $sql);
     if(!$result){
         ?>
-    }
+    
         <script>
             alert('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu');
             alert($count);
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php
     } else {
         ?>
-    }
+    
         <script>
             alert('Khá chắc kèo là đăng nhập thành cung');
             alert($count);
