@@ -10,10 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
     $count= mysqli_num_rows($result);
+    echo $count;
     if($count==0){      
             echo ('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu ');
     } else {
-            echo ('Khá chắc kèo là đăng nhập thành cung');
+            echo ('đăng nhập thành cung');
          header("location: ../wellcome.php");      
     }
     /*if ($count > 0) {
