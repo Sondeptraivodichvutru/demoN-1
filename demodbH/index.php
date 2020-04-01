@@ -1,18 +1,82 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-$host = "ec2-52-207-93-32.compute-1.amazonaws.com";
-$username = "cfpqcmieuguxzc";
-$password = "be1ff296c1e77f1c98793a8f224816674566f363be7ef2ba394d98aa8e9bb64a";
-$database = "d425mt4bhmok934";
-$port = "5432";
-$conn = mysqli_connect($host, $username, $port, $password, $database);
-//mysqli_query($conn, $database);
+    <head>
 
-if (mysqli_connect_error()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    echo'hic';
-} else {
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Login Form Templates</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="form-1/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="choose-layout-assets/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="form-1/assets/ico/favicon.png">
+
+    </head>
+
+    <body>
     
-    echo'kết nối đc này'.$conn;
-}
-?>
+    	<div class="top">
+    		<h1>Bootstrap Login Form Templates</h1>
+    		<p>
+				These are 3 free responsive login form templates made with Bootstrap. 
+				Download them on <a href="http://azmind.com"><strong>AZMIND</strong></a>, customize and use them as you like!
+			</p>
+    	</div>
+    
+    	<div class="section-container">
+	        <div class="container layouts">
+	            <div class="row">
+	                <div class="col-sm-12 section-description">
+	                    <h3>Choose Template</h3>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-10 col-sm-offset-1">
+	            		<div class="row">
+		                	<div class="col-sm-4 layout-box">
+			                	<a href="form-1/index.php">
+			                		<img src="choose-layout-assets/1.jpg" alt="">
+			                	</a>
+			                	<p>Form 1</p>
+		                    </div>
+		                    <div class="col-sm-4 layout-box">
+		                    	<a href="form-2/index.php">
+				                	<img src="choose-layout-assets/2.jpg" alt="">
+			                    </a>
+			                    <p>Form 2</p>
+		                    </div>
+		                    <div class="col-sm-4 layout-box">
+			                	<a href="form-3/index.php">
+			                		<img src="choose-layout-assets/3.jpg" alt="">
+			                	</a>
+			                	<p>Form 3</p>
+		                    </div>
+	                    </div>
+                    </div>
+	            </div>
+	        </div>
+        </div>
+        
+        <div class="container footer">
+            <div class="row">
+                <div class="col-sm-12">
+                	&copy; Bootstrap Login Form Templates by <a href="http://azmind.com" target="_blank">Azmind</a>.
+                </div>
+            </div>
+        </div>
+        
+    </body>
+
+</html>

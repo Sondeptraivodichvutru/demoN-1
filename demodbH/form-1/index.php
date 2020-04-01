@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mypassword = $_POST['pass'];
     echo $mypassword;
     echo $myusername;
-    $sql = "SELECT * FROM tblaccount";//WHERE _name = 'admin' and _pass = 'a'";
+    $sql = "SELECT * FROM tblaccount WHERE _name = 'admin' and _pass = 'a'";
     $result = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($result);
     // If result matched $myusername and $mypassword, table row must be 1 row
