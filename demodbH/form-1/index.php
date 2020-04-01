@@ -7,15 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = $_POST['name'];
     $mypassword = $_POST['pass'];
 
-    $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
+    $sql = "SELECT * FROM tblaccount";// WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
     $count= mysqli_num_rows($result);
- 
+    
     if($count==0){      
             echo ('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu ');
              echo $count;
     } else {
-            echo ('đăng nhập thành cung');
+            echo ('đăng nhập thành công');
              echo $count;
          header("location: ../wellcome.php");      
     }
