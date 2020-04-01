@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (pg_fetch_row($result)){      
           echo 'Đăng nhập được rồi'; 
-          header("../wellcome.php");
+          header('Location:../wellcome.php');
     }else{
         echo 'Đăng nhập hem đc';
     }
