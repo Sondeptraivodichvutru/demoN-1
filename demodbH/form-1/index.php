@@ -11,13 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = pg_query($conn, $sql);
     //$count= pg_fetch_row($result);
     
-    if(pg_fetch_row($result)){      
-            echo ('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu ');
-
-    } else {
-            echo ('đăng nhập thành công');
-
-         header("location: ../wellcome.php");      
+    while ($row=pg_fetch_row($result)){      
+          echo $row[0];    
     }
     /*if ($count > 0) {
         $_SESSION['login_user'] = $myusername;
