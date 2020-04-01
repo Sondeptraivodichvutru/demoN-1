@@ -7,14 +7,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $myusername = $_POST['name'];
     $mypassword = $_POST['pass'];
-    echo $mypassword;
-    echo $myusername;
-    $sql = "SELECT * FROM tblaccount WHERE _name = 'admin' and _pass = 'a'";
+
+    $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
     if(!$result){
-        echo 'Đăng nhập thất bại';
+        ?>
+    }
+        <script>
+            alert('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu');
+            alert($count);
+        </script>
+        <?php
     } else {
-        echo 'Đăng nhập thành công';
+        ?>
+    }
+        <script>
+            alert('Khá chắc kèo là đăng nhập thành cung');
+            alert($count);
+        </script>
+        
+        <?php 
+         header("location: ../wellcome.php");
+        
     }
     // If result matched $myusername and $mypassword, table row must be 1 row
     /*if ($count > 0) {
