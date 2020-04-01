@@ -3,21 +3,19 @@ include("../getConnect.php");
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form 
 
     $myusername = $_POST['name'];
     $mypassword = $_POST['pass'];
 
     $sql = "SELECT * FROM tblaccount WHERE _name = '$myusername' and _pass = '$mypassword'";
     $result = pg_query($conn, $sql);
-    if(!$result){      
+    $count= mysqli_num_rows($result);
+    if($count>0){      
             echo ('Khá chắc kèo là mi sai tài khoản hoặc mật khẩu'. pg_connection_status($conn));
     } else {
             echo ('Khá chắc kèo là đăng nhập thành cung'. pg_connection_status($conn));
-         header("location: ../wellcome.php");
-        
+         header("location: ../wellcome.php");      
     }
-    // If result matched $myusername and $mypassword, table row must be 1 row
     /*if ($count > 0) {
         $_SESSION['login_user'] = $myusername;
         header("location: ../wellcome.php");
