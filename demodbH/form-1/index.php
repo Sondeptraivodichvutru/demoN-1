@@ -7,7 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $myusername = $_POST['name'];
     $mypassword = $_POST['pass'];
-
+    echo $mypassword;
+    echo $myusername;
     $sql = "SELECT * FROM tblaccount WHERE _name = 'admin' and _pass = 'a'";
     $result = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($result);
@@ -87,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
+                                <form role="form" action="#" method="post" class="login-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="form-username">Username</label>
                                         <input type="text" name="name" placeholder="Username..." class="form-username form-control" id="form-username">
