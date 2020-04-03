@@ -597,7 +597,7 @@
                                                     include("../getConnect.php");
                                                     $sql = "SELECT * FROM tblproduct";
                                                     $result = pg_query($conn, $sql);
-                                                    while ($row = mysql_fetch_row($query)) {
+                                                    while ($row = pg_fetch_row($query)) {
                                                         ?>
                                                         <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="<?= $row[3] ?>" alt=""></div>
                                                         <div class="product_content">
