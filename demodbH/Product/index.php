@@ -588,14 +588,15 @@
                                     </div>
 
                                     <!-- Product Panel -->
-                                    <?PHP
+                                    
+                                        <div class="product_panel panel active">
+                                            <div class="featured_slider slider">
+                                                <?PHP
                                     include("../getConnect.php");
                                     $sql = "SELECT * FROM tblproduct";
                                     $result = pg_query($conn, $sql);
                                     while ($row = pg_fetch_row($result)) {
                                         ?>
-                                        <div class="product_panel panel active">
-                                            <div class="featured_slider slider">
                                                 <div class="featured_slider_item">
                                                     <div class="border_active"></div>
 
