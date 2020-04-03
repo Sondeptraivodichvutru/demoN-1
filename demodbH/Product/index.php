@@ -610,13 +610,14 @@
                                                                 <button class="product_cart_button">Add to Cart</button>
                                                             </div>
                                                         </div>
-                                                        <div class="product_fav"><i class="fas fa-heart"></i></div>
-                                                        <ul class="product_marks">
-                                                            <li class="product_mark product_new">new</li>
-                                                        </ul>
                                                         <?php
                                                     }
                                                     ?>
+                                                    <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                                    <ul class="product_marks">
+                                                        <li class="product_mark product_new">new</li>
+                                                    </ul>
+
                                                 </div>
                                             </div>
 

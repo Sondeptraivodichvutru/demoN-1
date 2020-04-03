@@ -15,7 +15,5 @@ $conn = pg_connect($conn_string);
 if (!$conn) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     echo'hic';
-} else {
-    echo'kết nối đc này';
 }
 ?>
