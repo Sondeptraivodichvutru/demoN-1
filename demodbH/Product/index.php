@@ -588,16 +588,17 @@
                                     </div>
 
                                     <!-- Product Panel -->
-                                    <div class="product_panel panel active">
-                                        <div class="featured_slider slider">
-                                            <div class="featured_slider_item">
-                                                <div class="border_active"></div>
-                                                <?PHP
-                                                include("../getConnect.php");
-                                                $sql = "SELECT * FROM tblproduct";
-                                                $result = pg_query($conn, $sql);
-                                                while ($row = pg_fetch_row($result)) {
-                                                    ?>
+                                    <?PHP
+                                    include("../getConnect.php");
+                                    $sql = "SELECT * FROM tblproduct";
+                                    $result = pg_query($conn, $sql);
+                                    while ($row = pg_fetch_row($result)) {
+                                        ?>
+                                        <div class="product_panel panel active">
+                                            <div class="featured_slider slider">
+                                                <div class="featured_slider_item">
+                                                    <div class="border_active"></div>
+
                                                     <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                                         <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="<?= $row[3] ?>" alt=""></div>
                                                         <div class="product_content">
@@ -619,16 +620,17 @@
                                                         </ul>
 
                                                     </div>
-                                                    <?php
-                                                }
-                                                ?>
+
+                                                </div>
+
+                                                <!-- Slider Item -->
+
                                             </div>
-
-                                            <!-- Slider Item -->
-
+                                            <div class="featured_slider_dots_cover"></div>
                                         </div>
-                                        <div class="featured_slider_dots_cover"></div>
-                                    </div>
+                                        <?php
+                                    }
+                                    ?>
 
                                     <!-- Product Panel -->
 
