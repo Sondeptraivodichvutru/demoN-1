@@ -588,16 +588,17 @@
                                     </div>
 
                                     <!-- Product Panel -->
-                                    
-                                        <div class="product_panel panel active">
-                                            <div class="featured_slider slider">
-                                                <?PHP
-                                    include("../getConnect.php");
-                                    $sql = "SELECT * FROM tblproduct";
-                                    $result = pg_query($conn, $sql);
-                                    while ($row = pg_fetch_row($result)) {
-                                        ?>
+
+                                    <div class="product_panel panel active">
+                                        <div class="featured_slider slider">
+                                            <?PHP
+                                            include("../getConnect.php");
+                                            $sql = "SELECT * FROM tblproduct";
+                                            $result = pg_query($conn, $sql);
+                                            while ($row = pg_fetch_row($result)) {
+                                                ?>
                                                 <div class="featured_slider_item">
+
                                                     <div class="border_active"></div>
 
                                                     <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
@@ -623,15 +624,15 @@
                                                     </div>
 
                                                 </div>
+                                                <?php
+                                            }
+                                            ?>
+                                            <!-- Slider Item -->
 
-                                                <!-- Slider Item -->
-
-                                            </div>
-                                            <div class="featured_slider_dots_cover"></div>
                                         </div>
-                                        <?php
-                                    }
-                                    ?>
+                                        <div class="featured_slider_dots_cover"></div>
+                                    </div>
+
 
                                     <!-- Product Panel -->
 
